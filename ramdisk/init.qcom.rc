@@ -224,10 +224,6 @@ on post-fs-data
     chmod 644 /sys/class/leds/led:red/brightness
     chmod 644 /sys/class/leds/led:green/brightness
 
-    chown root system /sys/devices/virtual/input/lge_touch/keypad_enable
-    chmod 0664 /sys/devices/virtual/input/lge_touch/keypad_enable
-    restorecon /sys/devices/virtual/input/lge_touch/keypad_enable
-
     chown system system /sys/class/leds/button-backlight/brightness
     chown system system /sys/class/leds/led:red/brightness
     chown system system /sys/class/leds/led:green/brightness
@@ -240,6 +236,7 @@ on post-fs-data
     write /sys/class/timed_output/vibrator/amp 90
 
     # Hardware tunables
+    chown root system /sys/devices/virtual/input/lge_touch/keypad_enable
     chown root system /sys/class/timed_output/vibrator/amp
     chown root system /sys/devices/platform/kcal_ctrl.0/kcal
     chown root system /sys/devices/platform/kcal_ctrl.0/kcal_ctrl
@@ -247,6 +244,7 @@ on post-fs-data
     chown root system /sys/devices/platform/mipi_lgit.1537/kgamma_g
     chown root system /sys/devices/platform/mipi_lgit.1537/kgamma_b
     chown root system /sys/devices/platform/mipi_lgit.1537/kgamma_apply
+    chmod 0664 /sys/devices/virtual/input/lge_touch/keypad_enable
     chmod 0664 /sys/class/timed_output/vibrator/amp
     chmod 0664 /sys/devices/platform/kcal_ctrl.0/kcal
     chmod 0664 /sys/devices/platform/kcal_ctrl.0/kcal_ctrl
@@ -254,6 +252,7 @@ on post-fs-data
     chmod 0664 /sys/devices/platform/mipi_lgit.1537/kgamma_g
     chmod 0664 /sys/devices/platform/mipi_lgit.1537/kgamma_b
     chmod 0664 /sys/devices/platform/mipi_lgit.1537/kgamma_apply
+    restorecon /sys/devices/virtual/input/lge_touch/keypad_enable
     restorecon /sys/class/timed_output/vibrator/amp
     restorecon /sys/devices/platform/kcal_ctrl.0/kcal
     restorecon /sys/devices/platform/kcal_ctrl.0/kcal_ctrl
