@@ -350,7 +350,7 @@ static int open_lights(const struct hw_module_t* module, char const* name,
 static struct hw_module_methods_t lights_module_methods = {
     .open =  open_lights,
 };
- 
+
 /*
  * The lights Module
  */
