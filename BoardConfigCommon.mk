@@ -170,3 +170,17 @@ TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
+TW_BRIGHTNESS_PATH := /sys/class/backlight/lm3530/brightness
+TW_MAX_BRIGHTNESS := 255
+
+#MultiROM config. MultiROM also uses parts of TWRP config
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/lge/gee-common/mr_init_devices.c
+MR_RD_ADDR := 0x82500000
+MR_DPI := hdpi
+MR_FSTAB := device/lge/gee-common/ramdisk/twrp.fstab
+MR_KEXEC_MEM_MIN := 0x85000000
+MR_INFOS := device/lge/gee-common/mrom_infos
+
+#Asserts
+TARGET_OTA_ASSERT_DEVICE := gee,geeb,geehrc,e975,geehrc_4g_spr,geespr,ls970,geehrc4g,geehrc4g_spr_us,geebus,e970,e973,e971,geeb_att_us
